@@ -9,6 +9,7 @@ pipeline {
         }
 		stage('Test'){
             steps{
+				sh "cd Jenkinsfile"
                 sh 'mvn clean test'
             }
         }
