@@ -7,16 +7,12 @@ pipeline {
                 sh 'mvn clean compilie'
             }
         }
-    }
-    stages{
-        stage('Test'){
+		stage('Test'){
             steps{
                 sh 'mvn clean test'
             }
         }
-    }
-    stages{
-        stage('deploy'){
+		stage('deploy'){
             steps{
                 sh 'mvn clean install'
             }
